@@ -1,0 +1,5 @@
+/**
+ * 
+ */
+
+var QuoteHistory = [clientinfo];

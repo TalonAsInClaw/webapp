@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Quote.js"></script>
+<script type="text/javascript">
+function submitForm() {
+	var q = new Quote(0,document.forms["quote"]["gallonsRequested"].value,0,
+			document.forms["quote"]["deliveryDate"].value,document.forms["quote"]["deliveryLocation"].value,
+		document.forms["quote"]["deliveryContactName"].value,document.forms["quote"]["deliveryContactPhone"].value,
+		document.forms["quote"]["deliveryContactEmail"].value,document.forms["quote"]["suggestedPrice"].value,
+		document.forms["quote"]["totalAmountDue"].value);
+	console.log(q);
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form name="quote" onsubmit="return submitForm()">
+		Gallons Requested:<input type="number" name="gallonsRequested" required><br>
+		Delivery Date:<input type="date" name="deliveryDate" required><br>
+		Delivery Location:<input type="text" name="deliveryLocation" required><br>
+		Delivery Contact Person Name:<input type="text" name="deliveryContactName" required ><br>
+		Delivery Contact Person Phone:<input type="tel" name="deliveryContactPhone" required><br>
+		Delivery COntact Person Email:<input type="email" name="deliveryContactEmail" required><br>
+		Suggested Price per Gallon:<input type="number" name="suggestedPrice" required><br>
+		Total Amount Due:<input type="number" name="totalAmountDue" required><br>
+		<input type="submit" value="Submit"> 
+	</form>
+
+</body>
+</html>

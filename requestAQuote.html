@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="Quote.js"></script>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<form>
-		Gallons Requested:<input type="number"><br>
-		Delivery Date:<input type="date"><br>
-		Delivery Location:<input type="text"><br>
-		Delivery Contact Person Name:<input type="text"><br>
-		Delivery Contact Person Phone:<input type="number"><br>
-		Delivery COntact Person Email:<input type="text"><br>
-		Suggested Price per Gallon:<input type="number"><br>
-		Total Amount Due:<input type="number"><br>
+
+	<form name="quote" action="formSubmit.php" method="post">
+		Gallons Requested:<input type="number" name="gallonsRequested" required><br>
+		Delivery Date:<input type="date" name="requestDate" required><br>
+		Delivery Location:<input type="text" name="deliveryAddress" required><br>
+		<input type="text" name="deliveryCity" value="city" required><br>
+		<input type="text" name="deliveryState" value="state" required><br>
+		<input type="number" name="deliveryZipCode" value="zip code" required><br>
+		Delivery Contact Person Name:<input type="text" name="deliveryContactName" required ><br>
+		Delivery Contact Person Phone:<input type="tel" name="deliveryContactPhone" required><br>
+		Delivery COntact Person Email:<input type="email" name="deliveryContactEmail" required><br>
+		Suggested Price per Gallon:<input type="number" min="0.01" step="0.01" name="suggestedPrice" required><br>
+		Total Amount Due:<input type="number" min="0.01" step="0.01" name="totalAmountDue" required><br>
 		<input type="submit" value="Submit"> 
 	</form>
+
 </body>
 </html>

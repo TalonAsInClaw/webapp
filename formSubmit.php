@@ -15,10 +15,9 @@ echo "Connected successfully";
 
 
 
-
 $sql = "
 INSERT INTO fuelQuote (clientId, gallonsRequested, requestDate, deliveryDate, deliveryAddress, deliveryCity, deliveryState, deliveryZipCode, deliveryContactName, deliveryContactPhone, deliveryContactEmail, suggestedPrice, totalAmountDue)
-VALUES (1,"+$_POST["gallonsRequested"]+","+$_POST["requestDate"]+","+$_POST["deliveryDate"]+","+$_POST["deliveryAddress"]+","+$_POST["deliveryCity"]+","+$_POST["deliveryState"]+","+$_POST["deliveryZipCode"]+","+$_POST["deliveryContactName"]+","+$_POST["deliveryContactPhone"]+","+$_POST["deliveryContactEmail"]+","+$_POST["suggestedPrice"]+","+$_POST["totalAmountDue"]+")";
+VALUES (1,".$_POST["gallonsRequested"].",'1234-10-10','".$_POST["deliveryDate"]."','".$_POST["deliveryAddress"]."','".$_POST["deliveryCity"]."','".$_POST["deliveryState"]."','".$_POST["deliveryZipCode"]."','".$_POST["deliveryContactName"]."','".$_POST["deliveryContactPhone"]."','".$_POST["deliveryContactEmail"]."','".$_POST["suggestedPrice"]."','".$_POST["totalAmountDue"]."')";
 
 
 if ($conn->query($sql) === TRUE) {

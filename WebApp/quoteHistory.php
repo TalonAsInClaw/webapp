@@ -49,7 +49,7 @@
 			<nav>
                 <ul>
                 	<li><a href="LandingPage.html">Home</a></li>
-		        	<li><a href="clientInformation.html">Client Information</a></li>
+		        	<li><a href="clientInfo.php">Client Information</a></li>
 		        	<li><a href="requestAQuote.html">Request a Quote</a></li>
                 </ul>
             </nav>
@@ -61,7 +61,7 @@
 				$servername = "localhost";
 				$username = "root";
 				$password = "";
-				$dbname = "webapp";
+				$dbname = "cs3320";
 
 				// Create connection
 				$conn = new mysqli($servername, $username, $password, $dbname);

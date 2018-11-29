@@ -1,10 +1,11 @@
 <html>
-
+<body>
+	<a href=requestAQuote.html> back </a>
 <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "webapp";
+$dbname = "cs3320";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
